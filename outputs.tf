@@ -5,8 +5,13 @@ output "result" {
   EOT
   sensitive   = true
   value = {
-    values    = {}
-    secrets   = {}
-    resources = []
+    values = {
+      virtual_network_id   = azurerm_virtual_network.vnet.id
+      virtual_network_name = azurerm_virtual_network.vnet.name
+    }
+    secrets = {}
+    resources = [
+      "/planes/azure/azurecloud/${azurerm_virtual_network.vnet.id}"
+    ]
   }
 }
