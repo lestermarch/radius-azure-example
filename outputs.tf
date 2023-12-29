@@ -4,7 +4,7 @@ output "result" {
   See [Author a Radius Recipe](https://docs.radapp.io/guides/recipes/howto-author-recipes/#step-3-output-the-result) for details.
   EOT
   sensitive   = true
-  value       = {
+  value = {
     values    = {}
     secrets   = {}
     resources = []

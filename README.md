@@ -10,3 +10,33 @@ This Terraform module is written as a Radius recipe, and as such differs from co
 - Radius provides an input `context` at deployment time; an object with information about the deployment context. See [Radius Context Schema](https://docs.radapp.io/reference/context-schema/) for more details.
 
 - Radius expects an output `result` post-deployment; an object describing output `values`, `secrets`, and `resources` for use by Radius in conjunction with other modules. The `result` output is set to sensitive to mask potential secret values from deployment output.
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+No providers.
+
+## Modules
+
+No modules.
+
+## Resources
+
+No resources.
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_context"></a> [context](#input\_context) | Radius-provided object containing information about the resource calling the Recipe.<br>See [Radius Context Schema](https://docs.radapp.io/reference/context-schema/) for details. | `any` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_result"></a> [result](#output\_result) | The result of the Recipe. Must match the target resource's schema.<br>See [Author a Radius Recipe](https://docs.radapp.io/guides/recipes/howto-author-recipes/#step-3-output-the-result) for details. |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
